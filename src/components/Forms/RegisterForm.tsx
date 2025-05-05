@@ -44,7 +44,9 @@ export function RegisterForm() {
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    const registerToastId = toast.loading("Registering...");
+    const registerToastId = toast.loading("Registering...", {
+      removeDelay: 5000,
+    });
     const response = await register(values);
     if (response.error) {
       toast.error("Register Failed.", { id: registerToastId });
