@@ -10,7 +10,7 @@ import {
   reportErrorMessage,
 } from "@/utils/handleErrorMessage";
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL_DEV;
 const REMINDER_URL = `${BACKEND_URL}/reminder`;
 const ACCOUNT_URL = `${BACKEND_URL}/account`;
 
